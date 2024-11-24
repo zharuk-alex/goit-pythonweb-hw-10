@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    container_name: contacts-app_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 567234
+      POSTGRES_DB: contacts_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+    container_name: contacts-app
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_URL=postgresql+asyncpg://postgres:567234@db:5432/contacts_db
+    command: ["sh", "-c", "sleep 10 && alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000"]
+
+
+
+volumes:
+  postgres_data:
