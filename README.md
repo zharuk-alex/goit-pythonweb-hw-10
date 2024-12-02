@@ -1,8 +1,8 @@
 ## intallation
 
 ```sh
-git clone https://github.com/zharuk-alex/goit-pythonweb-hw-08.git
-cd goit-pythonweb-hw-08
+git clone https://github.com/zharuk-alex/goit-pythonweb-hw-10.git
+cd goit-pythonweb-hw-10
 ```
 
 ```sh

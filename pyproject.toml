@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "goit-pythonweb-hw-08"
+name = "goit-pythonweb-hw-10"
 version = "0.1.0"
 description = ""
 authors = ["zharuk.alex <zzharuk@gmail.com>"]
@@ -14,6 +14,15 @@ asyncio = "^3.4.3"
 greenlet = "^3.1.1"
 fastapi = { extras = ["standard"], version = "^0.115.5" }
 unicorn = { extras = ["standard"], version = "^2.1.1" }
+pydantic-settings = "^2.6.1"
+slowapi = "^0.1.9"
+cloudinary = "^1.41.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+starlette = "^0.41.3"
+python-jose = { extras = ["cryptography"], version = "^3.3.0" }
+fastapi-mail = "^1.4.2"
+libgravatar = "^1.0.4"
+bcrypt = "^4.2.1"
 
 
 [build-system]
